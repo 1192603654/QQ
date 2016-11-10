@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+     >
+
+	<ImageView
+	    android:id="@+id/log_headico"
+	    android:layout_width="80dp"
+	    android:layout_height="80dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="50dp"
+	    android:src="@drawable/log_headico" />
+
+	<EditText
+	    android:id="@+id/log_useraccount"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/log_headico"
+	    android:background="@android:color/white"
+	    android:layout_marginTop="20dp"
+	    android:padding="8dp"
+	    android:layout_centerHorizontal="true"
+	    android:hint="@string/log_useraccount"
+	   />
+
+	<EditText
+	    android:id="@+id/log_userpwd"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/log_useraccount"
+	    android:background="@android:color/white"
+	    android:password="true"
+	    android:padding="8dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="1dp"
+	    android:hint="@string/log_userpwd"
+	    
+	  />
+
+	<Button
+	    android:id="@+id/log_commit"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:layout_margin="15dp"
+	    android:layout_below="@+id/log_userpwd"
+	    android:background="@drawable/selector_log_commitbtn"
+	    android:text="@string/log_commit"
+	    android:gravity="center"
+	    android:textColor="@android:color/white"
+	    android:textSize="18sp"
+	     />
+
+	<TextView
+	    android:id="@+id/log_forgot"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginBottom="20dp"
+	    android:textColor="@color/bgblue"
+	    android:textSize="12sp"
+	    android:text="@string/log_forgot" />
+
+	<TextView
+	    android:id="@+id/log_resgister"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/log_forgot"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="15dp"
+	    android:textColor="@color/bgblue"
+	    android:textSize="12sp"
+	    android:text="@string/log_resgister" />
+
+</RelativeLayout>

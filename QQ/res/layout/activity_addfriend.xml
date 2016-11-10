@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor">
+	<RelativeLayout 
+	    android:id="@+id/addfriend_top_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:background="@color/bgblue"
+	    >
+	    <TextView 
+	        android:id="@+id/addfriend_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="50dp"
+	        android:gravity="center"
+	        android:textColor="@android:color/white"
+	        android:text="联系人"
+	        android:textSize="18dp"
+	        android:layout_marginLeft="10dp"
+	        />
+
+	    <TextView
+	        android:id="@+id/addfriend_titlename"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/addfriend_left"
+	        android:layout_alignBottom="@+id/addfriend_left"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="@android:color/white"
+	        android:textSize="18dp"
+	        android:text="添加" />
+	    
+	</RelativeLayout>
+
+    <EditText
+        android:id="@+id/addfriend_account"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/addfriend_top_title"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/addfriend_commit"
+        android:background="@android:color/white"
+        android:hint="请输入用户账号" >
+    </EditText>
+    <Button
+        android:id="@+id/addfriend_commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addfriend_account"
+        android:layout_alignParentRight="true"
+        android:text="查找" />
+
+	<ListView
+	    android:id="@+id/addfriend_listview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:divider="@color/bgcolor"
+	    android:dividerHeight="1dp"
+	    android:layout_below="@+id/addfriend_account" >
+	</ListView>
+</RelativeLayout>

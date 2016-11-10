@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FB"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#12b7f5"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+        <Button
+            android:id="@+id/writesay_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/saysay_commitbg"
+            android:text="取消"
+            android:textColor="#F7F8FE"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="写说说"
+            android:textColor="#F7F8FE"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/writesay_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#12b7f5"
+            android:text="发表"
+            android:textColor="#DDDEE2"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/writesay_saysay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:hint="说点什么吧。。。"
+            android:maxLines="4"
+            android:minLines="2"
+            android:padding="15dp"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/write_shuoshuo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/writeshuoshuophoto" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/bgcolor" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp" >
+            <TextView
+                android:id="@+id/writesay_place"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="9"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="地点"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/qvip_pay_wallet_icon_arrow_right_normal" />
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:background="#F9F9FB" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="谁能看见"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="5"
+                android:gravity="right|center_vertical"
+                android:text="所有人可见"
+                android:textSize="14sp" />
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/qvip_pay_wallet_icon_arrow_right_normal" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

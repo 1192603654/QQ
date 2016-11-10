@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout 
+		    	android:layout_width="match_parent"
+		    	android:layout_height="250dp"
+		    	android:background="@drawable/frienddynamic_bg">
+
+		    	<LinearLayout
+		    	    android:id="@+id/friend_dynamic_text"
+		    	    android:layout_width="match_parent"
+		    	    android:layout_height="40dp"
+		    	    android:layout_alignParentBottom="true"
+		    	    android:layout_alignParentLeft="true"
+		    	    android:background="#2f666660"
+		    	    android:gravity="center_vertical"
+		    	    android:weightSum="4" >
+
+		    	    <TextView
+		    	        android:id="@+id/friend_dynamic_photo"
+		    	        android:layout_width="wrap_content"
+		    	        android:layout_height="wrap_content"
+		    	        android:layout_marginLeft="20dp"
+		    	        android:layout_weight="1"
+		    	        android:text="相册"
+		    	        android:textColor="@android:color/white"
+		    	        android:textSize="16sp" />
+
+		    	    <TextView
+		    	        android:id="@+id/friend_dynamic_saysay"
+		    	        android:layout_width="wrap_content"
+		    	        android:layout_height="wrap_content"
+		    	        android:layout_weight="1"
+		    	        android:text="说说"
+		    	        android:textColor="@android:color/white"
+		    	        android:textSize="16sp" />
+
+		    	    <TextView
+		    	        android:id="@+id/friend_dynamic_individuation"
+		    	        android:layout_width="wrap_content"
+		    	        android:layout_height="wrap_content"
+		    	        android:layout_weight="1"
+		    	        android:text="个性化"
+		    	        android:textColor="@android:color/white"
+		    	        android:textSize="16sp" />
+
+		    	    <TextView
+		    	        android:id="@+id/friend_dynamic_withme"
+		    	        android:layout_width="wrap_content"
+		    	        android:layout_height="wrap_content"
+		    	        android:layout_weight="1"
+		    	        android:text=" 与我相关"
+		    	        android:textColor="@android:color/white"
+		    	        android:textSize="16sp" />
+		    	</LinearLayout>
+
+		    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ <struts>
+     <package name="qq" extends="struts-default">
+			<action name="*user" class="action.qquseraction" method="{1}"></action>  
+			<action name="*message" class="action.qqmessageaction" method="{1}"></action>  
+			<action name="*friend" class="action.qqfrienduseraction" method="{1}"></action>    
+			<action name="*dynamic" class="action.qqdynamicaction" method="{1}"></action> 
+     </package>
+ </struts>

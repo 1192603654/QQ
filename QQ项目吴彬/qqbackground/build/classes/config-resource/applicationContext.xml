@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 数据源 -->
+	<bean id="dSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/qq?useUnicode=true&amp;characterEncoding=utf-8"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="tiger"></property>
+	</bean>
+	<!-- session工厂 -->
+	<bean id="sFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+			    <value>vo/qquser_hbm.xml</value>
+			    <value>vo/qqmessage_hbm.xml</value>
+			    <value>vo/qqdynamic_hbm.xml</value>
+			    <value>vo/qqfrienduser_hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="service" class="common.service"></bean>
+</beans>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/popupwindowbg" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/popupwindowbg" >
+
+        <ImageView
+            android:id="@+id/popup_shuoshuo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/haoyoudongtaishuoshuo" />
+
+        <ImageView
+            android:id="@+id/popup_zhaopian"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/popup_shuoshuo"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/popup_shuoshuo"
+            android:src="@drawable/haoyoudongtaizhaopian" />
+
+        <ImageView
+            android:id="@+id/popup_qiandao"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/popup_zhaopian"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/popup_zhaopian"
+            android:src="@drawable/haoyoudongtaiqiandao" />
+
+        <ImageView
+            android:id="@+id/popup_shiping"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/popup_qiandao"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/popup_qiandao"
+            android:src="@drawable/haoyoudongtaishiping" />
+
+        <ImageView
+            android:id="@+id/popup_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/haoyoudongtai_right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/popup_shuoshuo"
+            android:layout_below="@+id/popup_zhaopian"
+            android:layout_toLeftOf="@+id/popup_zhaopian"
+            android:gravity="center_horizontal"
+            android:text="说说" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/popup_zhaopian"
+            android:layout_alignRight="@+id/popup_zhaopian"
+            android:layout_below="@+id/popup_zhaopian"
+            android:gravity="center_horizontal"
+            android:text="照片" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/popup_qiandao"
+            android:layout_alignRight="@+id/popup_qiandao"
+            android:layout_below="@+id/popup_qiandao"
+            android:gravity="center_horizontal"
+            android:text="签到" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/popup_shiping"
+            android:layout_alignRight="@+id/popup_shiping"
+            android:layout_below="@+id/popup_shiping"
+            android:gravity="center_horizontal"
+            android:text="视频" />
+    </RelativeLayout>
+
+</RelativeLayout>

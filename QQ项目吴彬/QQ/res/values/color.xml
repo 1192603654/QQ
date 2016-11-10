@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bgcolor">#f0f0f0</color>
+    <color name="bgblue">#46ccff</color>
+    <color name="bgblue_log_false">#46c2f2</color>
+    <color name="gray_font">#818181</color>
+    <color name="whites">#ffffff</color>
+    <color name="devide_line">#CBCED2</color>
+    <color name="popupwindowbg">#f5f5f5</color>
+    <color name="saysay_commitbg">#12b7f5</color>
+</resources>

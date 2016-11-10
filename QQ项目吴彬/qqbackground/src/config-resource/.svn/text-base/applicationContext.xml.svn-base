@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 数据源 -->
+	<bean id="dSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@192.168.6.10:1521:orcl"></property>
+		<property name="username" value="scott"></property>
+		<property name="password" value="tiger"></property>
+	</bean>
+	<!-- session工厂 -->
+	<bean id="sFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<!-- 通知 -->
+				<value>com/ht/vo/msg/mapping/Msg.hbm.xml</value>
+				<value>com/ht/vo/msg/mapping/Sug.hbm.xml</value>
+				
+				<!-- 学生 -->
+				<value>com/ht/vo/stu/mapping/Classes.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Hourse.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Job.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Rew.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Says.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Score.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Stuleve.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Stunum.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Web.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Login.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Scoreweb.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Stuscore.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Computers.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Views.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Viewteach.hbm.xml</value>
+				<value>com/ht/vo/stu/mapping/Viewstu.hbm.xml</value>
+						
+
+				<value>com/ht/vo/stu/mapping/Student.hbm.xml</value>
+				<!-- 财务映射 -->
+				<value>com/ht/vo/mon/mapping/Ava.hbm.xml</value>
+				<value>com/ht/vo/mon/mapping/Capy.hbm.xml</value>
+				<value>com/ht/vo/mon/mapping/Mon.hbm.xml</value>
+				<value>com/ht/vo/mon/mapping/Pay.hbm.xml</value>
+				<value>com/ht/vo/mon/mapping/Computer.hbm.xml</value>
+				<value>com/ht/vo/mon/mapping/Pays.hbm.xml</value>
+				<value>com/ht/vo/mon/mapping/Getpays.hbm.xml</value>
+				
+				<!-- 招生 -->
+				<value>com/ht/vo/inten/mapping/Inten.hbm.xml</value>
+				
+				<!-- 员工映射 -->
+				<value>com/ht/vo/emp/mapping/Apply.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Applygoods.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Applylist.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Applyuse.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Dept.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Duty.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Emp.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Family.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Jobs.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Leave.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Overtime.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Patrol.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Report.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Staydeal.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Workcheck.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Workcheckdesc.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Patrolshuse.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Workdoing.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Limit.hbm.xml</value>
+				<value>com/ht/vo/emp/mapping/Kaoqin.hbm.xml</value>
+			
+				
+				<!-- 教务 -->
+				<value>com/ht/vo/edu/mapping/Class.hbm.xml</value>
+				<value>com/ht/vo/edu/mapping/Object.hbm.xml</value>
+				<value>com/ht/vo/edu/mapping/Objectimg.hbm.xml</value>
+				<value>com/ht/vo/edu/mapping/TBacke.hbm.xml</value>
+				<value>com/ht/vo/edu/mapping/DBacke.hbm.xml</value>
+				<value>com/ht/vo/edu/mapping/Faculymff.hbm.xml</value>
+				<value>com/ht/vo/edu/mapping/Tra.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9iDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 宿舍管理 -->
+	<bean id="LService" class="com.ht.serviceImpl.stu.HourseServiceImpl"></bean>
+	<!-- 部门管理 -->
+	<bean id="deptservice" class="com.ht.service.impl.dept.DeptServiceImpl"></bean>
+	<!-- 员工管理 -->
+	<bean id="empservice" class="com.ht.service.impl.dept.EmpServiceImpl"></bean>
+	<!-- 日志管理 -->
+	<bean id="reportservice" class="com.ht.service.impl.dept.ReportServiceImpl"></bean>
+	<!-- 请/修假管理 -->
+	<bean id="leaveservice" class="com.ht.service.impl.dept.LeaveServiceImpl"></bean>
+	<!-- 加假管理 -->
+	<bean id="overservice" class="com.ht.service.impl.dept.OverTimeServiceImpl"></bean>
+	<!-- 考勤管理 -->
+	<bean id="wcheckservice" class="com.ht.service.impl.dept.WCheckServiceImpl"></bean>
+	<!-- 考勤详情管理 -->
+	<bean id="wcheckdescservice" class="com.ht.service.impl.dept.WCheckDescServiceImpl"></bean>
+	<!-- 值班管理 -->
+	<bean id="dutyservice" class="com.ht.service.impl.dept.DutyServiceImpl"></bean>
+	<!-- 巡查班级管理 -->
+	<bean id="patrolclassservice" class="com.ht.service.impl.dept.PatrolClassServiceImpl"></bean>
+	<!-- 巡查宿舍管理 -->
+	<bean id="patrolshuseservice" class="com.ht.service.impl.dept.PatrolShuSeServiceImpl"></bean>
+	<!-- 值班安排管理 -->
+	<bean id="wdoingservice" class="com.ht.service.impl.dept.WorkDoingServiceImpl"></bean>
+	<!-- 教务管理 -->
+	<bean id="eduservice" class="com.ht.service.edu.imp.eduimp"></bean>
+	<!-- 财务管理 -->
+	<bean id="monservice" class="com.ht.service.mon.imp.monserviceimp"></bean>
+	<!-- 通知 -->
+	<bean id="msgservice" class="com.ht.service.msg.impl.MsgServiceImpl"></bean>
+	<bean id="sugservice" class="com.ht.service.msg.impl.SugServiceImpl"></bean>
+	<!-- 登陆注册 -->
+	<bean id="loginservice" class="com.ht.serviceImpl.stu.LoginServiceImpl"></bean>	
+	<!-- 班级管理   -->
+	<bean id="classService" class="com.ht.serviceImpl.stu.ClassServiceImpl"></bean>
+	<!-- 学生信息 -->
+	<bean id="stuService" class="com.ht.serviceImpl.stu.StudentServiceImpl"></bean>
+	<!-- 成绩管理 -->
+	<bean id="scoreService" class="com.ht.serviceImpl.stu.ScoreServiceImpl"></bean>
+	<!-- 学生总结 -->
+	<bean id="NumService" class="com.ht.serviceImpl.stu.StunumServiceImpl"></bean>
+	<!-- 项目答辩管理 -->
+	<bean id="webService" class="com.ht.serviceImpl.stu.WebServiceImpl"></bean>
+	<!-- 谈心记录 -->
+	<bean id="sayService" class="com.ht.serviceImpl.stu.SayServiceImpl"></bean>
+	<!-- 就业跟踪 -->
+	<bean id="jobService" class="com.ht.serviceImpl.stu.JobServiceImpl"></bean>
+	<!-- 学生请假管理 -->
+	<bean id="LeveService" class="com.ht.serviceImpl.stu.StuleveImpl"></bean>
+	<!-- 电脑领用申请 -->
+	<bean id="ComService" class="com.ht.serviceImpl.stu.ComServiceImpl"></bean>
+	<!-- 学生反馈 -->
+	<bean id="ViewService" class="com.ht.serviceImpl.stu.ViewServiceImpl"></bean>
+	<!-- 回复学生意见反馈 -->
+	<bean id="TeachViewService" class="com.ht.serviceImpl.stu.ViewteachServiceImpl"></bean>
+	<!-- 招生管理 -->
+	<bean id="intenService"  class="com.ht.serviceImpl.inten.IntenServiceImpl"></bean>
+	<!--登入验证 -->
+	<bean  id="loginService"  class="com.ht.login.serviceimpl.LoginServiceImpl"></bean>
+	<!--登入后 -->
+	<bean  id="loginAfterService"  class="com.ht.login.serviceimpl.LoginAfterServiceImpl"></bean>
+	
+
+	
+</beans>

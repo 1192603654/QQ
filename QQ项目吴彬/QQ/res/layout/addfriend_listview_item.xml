@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="60dp">
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/addfriend_listview_item_headico"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/log_headico" />
+
+    <TextView
+        android:id="@+id/addfriend_listview_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addfriend_listview_item_headico"
+        android:layout_alignLeft="@+id/addfriend_listview_item_username"
+        android:textSize="14sp"
+        android:text="今天出去吃饭吧！" />
+
+    <TextView
+        android:id="@+id/addfriend_listview_item_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addfriend_listview_item_content"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/addfriend_listview_item_headico"
+        android:text="用户昵称"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/addfriend_add"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/bgcolor"
+        android:text="添加"
+        android:textColor="@color/bgblue" />
+
+</RelativeLayout>
+</RelativeLayout>

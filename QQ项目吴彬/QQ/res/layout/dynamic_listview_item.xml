@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/dynamic_headico"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/log_headico" />
+
+        <TextView
+            android:id="@+id/dynamic_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/dynamic_headico"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/dynamic_headico"
+            android:text="霜不落"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+		
+        <TextView
+            android:id="@+id/dynamic_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dynamic_username"
+            android:layout_below="@+id/dynamic_username"
+            android:text="10月16日13:32" />
+
+        <TextView
+            android:id="@+id/dynamic_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dynamic_headico"
+            android:layout_below="@+id/dynamic_time"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:text="骗人小狗！" />
+
+        <ImageView
+            android:id="@+id/dynamic_content_ico"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_alignLeft="@+id/dynamic_content"
+            android:layout_below="@+id/dynamic_content"
+            android:src="@drawable/kangyikun" />
+    </RelativeLayout>
+
+</RelativeLayout>

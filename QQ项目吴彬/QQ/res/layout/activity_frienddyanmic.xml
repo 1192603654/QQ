@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3">
+    
+		       		<ListView
+		       		    android:id="@+id/friend_dynamic_item"
+		       		    android:layout_width="wrap_content"
+		       		    android:layout_height="wrap_content"
+		       		    android:divider="@color/bgcolor"
+		       		    android:dividerHeight="3dp" >
+			</ListView>
+    <RelativeLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="50dp"
+		            android:padding="10dp"
+		            android:background="@android:color/transparent">
+		            <TextView 
+		                android:id="@+id/friend_dynamic_backdynamic"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="动态"
+		                android:textSize="20dp"
+		                android:textColor="@android:color/white"
+		                android:drawableLeft="@drawable/left_arrows"
+		                android:layout_alignParentLeft="true"
+		                android:layout_centerVertical="true"
+		                />
+		            <TextView 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="好友动态"
+		                android:textSize="20dp"
+		                android:textColor="@android:color/white"
+		                android:gravity="center_horizontal"
+		                android:layout_centerInParent="true"
+		                android:layout_centerVertical="true"
+		                />
+		            <Button 
+		                android:id="@+id/friend_dynamic_add"
+		                android:layout_width="30dp"
+		                android:layout_height="30dp"
+		                android:background="@drawable/friend_dynamic_published"
+		                android:layout_alignParentRight="true"
+		                android:layout_centerVertical="true"
+		                /> 
+		        </RelativeLayout>
+		       		 <View 
+		                android:id="@+id/top_popup"
+		                android:layout_width="match_parent"
+		                android:layout_height="0.1dp"
+		                android:layout_alignParentTop="true"
+		                />
+</RelativeLayout>

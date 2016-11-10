@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QQ</string>
+	<!-- 登录 -->
+	<string name="log_useraccount">QQ号/手机号/邮箱</string>
+	<string name="log_userpwd">密码</string>
+	<string name="log_resgister">新用户注册</string>
+	<string name="log_commit">登录</string>
+	<string name="log_forgot">忘记密码?</string>
+	<!-- 注册 -->
+	<string name="register_title">新用户注册</string>
+	<string name="register_username">不超过20个字符</string>
+	<string name="register_userpwd">6-20个字符</string>
+	<string name="register_userpwdverify">6-20个字符</string>
+	<string name="tv_tips_password">密码由6-16位数字,字母或符号组成,不能是9位一下纯数字组成</string>
+	<string name="tv_tips_name">建议填写你的真实姓名,让你的朋友更容易人出你,此昵称以后可以随时修改</string>
+</resources>
